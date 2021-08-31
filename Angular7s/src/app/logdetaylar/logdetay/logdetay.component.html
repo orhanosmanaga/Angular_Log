@@ -1,0 +1,48 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+<input type="hidden" name="Int" [value]="service.formData.Int">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+
+        </div>
+        
+      </div>
+      <input name="Message" #Message="ngModel" [(ngModel)]="service.formData.Message" type="text" class="form-controller" placeholder="mesaj">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+
+        </div>
+        
+      </div>
+      <input name="CreateDate" #Message="ngModel" [(ngModel)]="service.formData.CreateDate" type="text" class="form-controller" placeholder="CreateDate">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+
+        </div>
+        
+      </div>
+      <select name="LogType" #Message="ngModel" [(ngModel)]="service.formData.LogType" type="text" class="form-controller" >
+        <option value="exception">exception</option>
+        <option value="trace">trace</option>
+        <option value="info">info</option>
+       
+      </select>
+    
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" type="submit">Gönder</button>
+  </div>
+</form>
